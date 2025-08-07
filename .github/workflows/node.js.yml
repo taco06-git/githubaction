@@ -16,5 +16,19 @@ jobs:
       run:  sudo cp -R web/* /var/www/html/
 
     - name: PAUSE
-      run: sleep 100
+      run: sleep 10
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4.3.1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-north-1
+
+    - name: List s3 directory 
+      run: aws s3 ls
+
+    - name: PAUSE
+      run: sleep 30
+     
    
