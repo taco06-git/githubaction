@@ -10,8 +10,8 @@ jobs:
     runs-on: self-hosted
     steps:
     - name: Download GITREPO
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
     
     - name: Copy the code into /var/www/html
-    - run:  cp -R web/* /var/www/html/
+      run:  cp -R web/* /var/www/html/
    
