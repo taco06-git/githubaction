@@ -14,4 +14,7 @@ jobs:
     
     - name: Copy the code into /var/www/html
       run:  sudo cp -R web/* /var/www/html/
+
+    - name: PAUSE
+      run: sleep 100
    
